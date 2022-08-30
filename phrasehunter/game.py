@@ -1,4 +1,4 @@
-from phrase import Phrase
+from phrasehunter.phrase import Phrase
 import random
 
 
@@ -11,7 +11,7 @@ class Game:
                         Phrase("Go crazy folks go crazy"),
                         Phrase("Juuust a bit outside")
                        ]
-        self.active_phrase = " "
+        self.active_phrase = None
         self.guesses = [" "]
 
     def get_random_phrase(self):
@@ -29,7 +29,7 @@ You have 5 chances to guess it correctly!"""
 
     def start(self):
         self.welcome()
-        self. get_random_phrase():
+        self.get_random_phrase()
 
         while self.missed < 5 and self.active_phrase.check_complete(self.guesses) == False:
             print(f"\nIncorrect guesses: {self.missed}")
